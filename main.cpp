@@ -13,9 +13,10 @@ int main() {
   cout << "\nWelcome to RPS!" << endl << endl;
   // RPSMenu.displayMenu();
   Tool newTool;
-  Rock r1(5, 'r');
-  Paper p1(12, 'p');
-  Scissors s1(3, 's');
+  Rock r1(4, 'r');
+  Rock r2(12, 'r');
+  Paper p1(2, 'p');
+  Scissors s1(5, 's');
 
   cout << "New Tool Strength: " << newTool.getStrength() << endl;
   cout << "Rock Strength: " << r1.getStrength() << endl;
@@ -25,6 +26,10 @@ int main() {
   cout << "Rock Type: " << r1.getType() << endl;
   cout << "Paper Type: " << p1.getType() << endl;
   cout << "Scissors Type: " << s1.getType() << endl << endl;
+
+  r1.fight(p1);
+  r1.fight(s1);
+  r1.fight(r2);
 
   return 0;
 }

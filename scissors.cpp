@@ -1,5 +1,5 @@
-#include "scissors.hpp"
 #include "tool.hpp"
+#include "scissors.hpp"
 
 Scissors::Scissors() : Tool() {
   type = 's';
