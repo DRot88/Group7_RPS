@@ -9,8 +9,9 @@ using std::cin;
 using std::endl;
 
 int main() {
-
+  Menu RPSMenu;
   cout << "\nWelcome to RPS!" << endl << endl;
+  RPSMenu.displayMenu();
 
   return 0;
 }
