@@ -4,10 +4,13 @@
 class Tool {
   protected:
     int strength;
+    char type;
   public:
     Tool();
+    // ~Tool();
     void setStrength(int str);
     int getStrength();
+    virtual char getType();
     // virtual void fight(*tool); // potentially pure virtual function
 };
 

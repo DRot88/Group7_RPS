@@ -11,3 +11,11 @@ void Tool::setStrength(int str) {
 int Tool::getStrength() {
   return strength;
 }
+
+char Tool::getType() {
+  return type;
+}
+
+// Tool::~Tool() {
+//   delete;
+// }

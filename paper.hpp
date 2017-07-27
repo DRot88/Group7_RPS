@@ -4,10 +4,11 @@
 
 class Paper : public Tool {
   private:
-    char type;
+    
   public:
     Paper(); // default – set strength to 1, set type to ‘p’
     Paper(int str, char p); // sets user defined strength
+    virtual char getType();
     // virtual void fight(); // temp double strength against Rock, half strength vs scissors
 };
 

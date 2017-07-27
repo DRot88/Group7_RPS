@@ -22,5 +22,9 @@ int main() {
   cout << "Paper Strength: " << p1.getStrength() << endl;
   cout << "Scissors Strength: " << s1.getStrength() << endl << endl;
 
+  cout << "Rock Type: " << r1.getType() << endl;
+  cout << "Paper Type: " << p1.getType() << endl;
+  cout << "Scissors Type: " << s1.getType() << endl << endl;
+
   return 0;
 }

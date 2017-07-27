@@ -9,3 +9,7 @@ Scissors::Scissors(int str, char t) : Tool () {
   this->setStrength(str);
   type = t;
 }
+
+char Scissors::getType() {
+  return type;
+}

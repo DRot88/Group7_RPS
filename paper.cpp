@@ -9,3 +9,7 @@ Paper::Paper(int str, char t) : Tool () {
   this->setStrength(str);
   type = t;
 }
+
+char Paper::getType() {
+  return type;
+}
