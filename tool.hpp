@@ -6,7 +6,8 @@ class Tool {
     int strength;
   public:
     Tool();
-    void setStrength(int str); 
+    void setStrength(int str);
+    int getStrength();
     // virtual void fight(*tool); // potentially pure virtual function
 };
 
