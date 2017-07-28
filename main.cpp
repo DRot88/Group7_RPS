@@ -12,13 +12,13 @@ int main() {
   Menu RPSMenu;
   cout << "\nWelcome to RPS!" << endl << endl;
   // RPSMenu.displayMenu();
-  Tool newTool;
+  // Tool newTool;
   Rock r1(4, 'r');
   Rock r2(12, 'r');
   Paper p1(2, 'p');
   Scissors s1(5, 's');
 
-  cout << "New Tool Strength: " << newTool.getStrength() << endl;
+  // cout << "New Tool Strength: " << newTool.getStrength() << endl;
   cout << "Rock Strength: " << r1.getStrength() << endl;
   cout << "Paper Strength: " << p1.getStrength() << endl;
   cout << "Scissors Strength: " << s1.getStrength() << endl << endl;

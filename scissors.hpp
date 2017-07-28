@@ -9,7 +9,7 @@ class Scissors : public Tool {
     Scissors(); // default – set strength to 1, set type to ‘s’
     Scissors(int str, char t); // sets user defined strength
     virtual char getType();
-    // virtual void fight(); // temp double strength against Paper, half strength vs Rock
+    void fight(Tool t); // temp double strength against Paper, half strength vs Rock
 };
 
 
