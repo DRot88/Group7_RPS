@@ -87,7 +87,11 @@ void RPSGame::playGame() {
       } else {
         tieGames++;
       }
-      gameStatus();      
+      gameStatus();   
+      delete p1Tool;
+      p1Tool = 0;
+      delete compTool;
+      compTool = 0;   
     } else if (userChoice == 'y') {
       int cpuStrength = (rand() % 10) + 1;
       cout << "\nPlease choose an integer for the Strength of the tool: ";
@@ -122,14 +126,13 @@ void RPSGame::playGame() {
       }
 
       gameStatus();
+      delete p1Tool;
+      p1Tool = 0;
+      delete compTool;
+      compTool = 0;
     }
   }
   return;
 }
 
-RPSGame::~RPSGame() {
-  delete p1Tool;
-  p1Tool = 0;
-  delete compTool;
-  compTool = 0;
-}
+RPSGame::~RPSGame() {}
