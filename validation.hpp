@@ -1,3 +1,22 @@
+/******************************************************
+
+** Program: validation.hpp
+
+** Authors:	Daniel Rotenberg
+			Samuel Bernstein
+			Jaycie David
+			Robert McGugan
+
+
+** Date: 07/15/2017
+
+** Description:	This is the header file for the input
+				validation functions. It holds the
+				prototypes for each of the functions so
+				that they may be used with inclusion of
+				this header file.
+*******************************************************/
+
 #ifndef VALIDATION_HPP
 #define VALIDATION_HPP
 

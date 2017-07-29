@@ -1,24 +1,58 @@
+/******************************************************
+
+** Program: scissors.cpp
+
+** Authors:	Daniel Rotenberg
+			Samuel Bernstein
+			Jaycie David
+			Robert McGugan
+
+
+** Date: 07/15/2017
+
+** Description:	This is the Scissors class 
+				implementation file. It contains a 
+				default constructor, an overload 
+				constructor, a get method that can be
+				called by the Tool class polymorphically,
+				a destructor, and a fight function.
+*******************************************************/
+
 #include "tool.hpp"
 #include "scissors.hpp"
 #include <iostream>
 using std::cout;
 using std::endl;
 
+//default constructor
 Scissors::Scissors() : Tool() {
   type = 's';
 }
 
+
+//overload constructor
 Scissors::Scissors(int str, char t) : Tool () {
   this->setStrength(str);
   type = t;
 }
 
+//destructor
 Scissors::~Scissors(){};
 
+//get method
 char Scissors::getType() {
   return type;
 }
 
+/****************************************************
+* This function takes in a pointer to a tool. It	*
+* checks for what type the tools are and temporarily*
+* adjusts their strengths accordingly. It then		*
+* displays a message that informs the user of what	*
+* the outcome of the fight was and returns an int	*
+* used by the RPSGame class to increment scoreboard	*
+* options.											*
+****************************************************/
 int Scissors::fight(Tool *t) {
   if (t->getType() == 'r') {
     cout << "Scissors is weak against Rock.." << endl;

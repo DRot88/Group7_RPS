@@ -1,3 +1,18 @@
+/******************************************************
+
+** Program: paper.hpp
+
+** Authors:	Daniel Rotenberg
+			Samuel Bernstein
+			Jaycie David
+			Robert McGugan
+
+
+** Date: 07/15/2017
+
+** Description:
+*******************************************************/
+
 #ifndef PAPER_HPP
 #define PAPER_HPP
 #include "tool.hpp"

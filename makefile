@@ -9,7 +9,7 @@
 CC = g++
 STD = -std=c++11
 CFLAGS = -c -g -Wall
-SOURCES = main.cpp tool.cpp rock.cpp paper.cpp scissors.cpp rpsGame.cpp validation.cpp
+SOURCES = play_game.cpp tool.cpp rock.cpp paper.cpp scissors.cpp rpsGame.cpp validation.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 EXECUTABLE = group7RPS
 

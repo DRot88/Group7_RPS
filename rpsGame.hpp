@@ -1,6 +1,20 @@
+/******************************************************
+
+** Program: rpsGame.hpp
+
+** Authors:	Daniel Rotenberg
+			Samuel Bernstein
+			Jaycie David
+			Robert McGugan
+
+
+** Date: 07/15/2017
+
+** Description:
+*******************************************************/
+
 #ifndef RPSGAME_HPP
 #define RPSGAME_HPP
-#include "menu.hpp"
 #include "tool.hpp"
 
 enum RPS {R=0, P=1, S=2};

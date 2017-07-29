@@ -1,3 +1,18 @@
+/******************************************************
+
+** Program: paper.cpp
+
+** Authors:	Daniel Rotenberg
+			Samuel Bernstein
+			Jaycie David
+			Robert McGugan
+
+
+** Date: 07/15/2017
+
+** Description:
+*******************************************************/
+
 #include "paper.hpp"
 #include "tool.hpp"
 #include <iostream>

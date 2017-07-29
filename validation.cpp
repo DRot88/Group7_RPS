@@ -1,3 +1,38 @@
+/******************************************************
+
+** Program: validation.cpp
+
+** Authors:	Daniel Rotenberg
+			Samuel Bernstein
+			Jaycie David
+			Robert McGugan
+
+
+** Date: 07/15/2017
+
+** Description: * The getInt function takes in an in a 
+				string from the user, validates that 
+				it contains no invalid characters, then
+				converts it to an integer before 
+				returning its value. If the string 
+				contains invalid characters, then it
+				reruns the program.
+				* The getMenu function calls the getInt
+				function to get validated user input,
+				then checks to see if that integer falls
+				within the range of passed parameters,
+				and finally returns the integer if it 
+				within the range. If the input is outside
+				of the range, it reruns the function.
+				* The getChar function is used to validate
+				a character input from the user. It takes
+				takes in the address of a variable holding
+				a string and tests the first character 
+				to see if it is a match to one of the 
+				other four passed parameters. If it is
+				not, then it reruns the function.
+*******************************************************/
+
 #include <iostream>
 #include <cctype>
 #include <cstdio>
@@ -11,6 +46,15 @@ using std::endl;
 using std::streamsize;
 using std::numeric_limits;
 
+/********************************************
+* The getMenu function calls the getInt		*
+* function to get validated user input,		*
+* then checks to see if that integer falls	*
+* within the range of passed parameters,	*
+* and finally returns the integer if it		*
+* within the range.If the input is outside	*
+* of the range, it reruns the function.		*
+********************************************/
 int getMenu(int lowerBound, int upperBound)
 {
    int selection = -1;
@@ -32,6 +76,15 @@ int getMenu(int lowerBound, int upperBound)
    return selection;
 }
 
+/********************************************
+* The getInt function takes in an in a		*
+* string from the user, validates that		*
+* it contains no invalid characters, then	*
+* converts it to an integer before			*
+* returning its value. If the string		*
+* contains invalid characters, then it		*
+* reruns the program.						*
+********************************************/
 int getInt()
 {
    bool invalidEntry = false;
@@ -73,7 +126,15 @@ int getInt()
    return stoi(stringInput);
 }
 
-//character validation function
+/********************************************
+* The getChar function is used to validate	*
+* a character input from the user. It takes	*
+* takes in the address of a variable holding*
+* a string and tests the first character	*
+* to see if it is a match to one of the		*
+* other four passed parameters. If it is	*
+* not, then it reruns the function.			*
+********************************************/
 void getChar(char& character, char c1, char c2, char c3, char c4)
 {
    //get value from user
