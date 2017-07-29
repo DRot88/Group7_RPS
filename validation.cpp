@@ -2,8 +2,76 @@
 #include <cctype>
 #include <cstdio>
 #include <limits>
+#include <string>
 #include "validation.hpp"
-using namespace std;
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::streamsize;
+using std::numeric_limits;
+
+int getMenu(int lowerBound, int upperBound)
+{
+   int selection = -1;
+   selection = getInt();
+
+   while (selection < lowerBound || selection > upperBound)
+   {
+      //Print error message.
+      cout << "Option not found in menu."
+         << " Please enter a number between " << lowerBound << " and "
+         << upperBound << ". ";
+
+      //clear buffer
+      cin.clear();
+      cin.ignore(4096, '\n');
+      
+      selection = getInt();
+   }
+   return selection;
+}
+
+int getInt()
+{
+   bool invalidEntry = false;
+   string stringInput;
+
+   cin >> stringInput;
+   //Check to make sure no character other than an integer 0-9 was entered.
+   for (int i = 0; i < stringInput.length(); i++)
+   {
+      if (stringInput[i] != '0' && stringInput[i] != '1' && stringInput[i] != '2' && stringInput[i] != '3'
+         && stringInput[i] != '4' && stringInput[i] != '5' && stringInput[i] != '6' && stringInput[i] != '7'
+         && stringInput[i] != '8' && stringInput[i] != '9')
+      {
+         invalidEntry = true;
+      }
+   }
+
+   while(invalidEntry)
+   {
+      //If a character other than 0-9 was entered, print error message, clear input buffer, and loop until proper input.
+      cout << "You must enter an integer: ";
+      cin.clear();
+      cin.ignore(4096, '\n');
+      invalidEntry = false;
+      
+      cin >> stringInput;
+      //Check to make sure no character other than an integer 0-9 was entered.
+      for (int i = 0; i < stringInput.length(); i++)
+      {
+         if (stringInput[i] != '0' && stringInput[i] != '1' && stringInput[i] != '2' && stringInput[i] != '3' 
+            && stringInput[i] != '4' && stringInput[i] != '5' && stringInput[i] != '6' && stringInput[i] != '7' 
+            && stringInput[i] != '8' && stringInput[i] != '9')
+         {
+            invalidEntry = true;
+         }
+      }
+   }
+   //convert to int and return
+   return stoi(stringInput);
+}
 
 //character validation function
 void getChar(char& character, char c1, char c2, char c3, char c4)

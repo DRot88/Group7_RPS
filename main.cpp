@@ -1,7 +1,6 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
-#include "menu.hpp"
 #include "tool.hpp"
 #include "rock.hpp"
 #include "paper.hpp"

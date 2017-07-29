@@ -19,17 +19,20 @@ char Rock::getType() {
   return type;
 }
 
-void Rock::fight(Tool *t) {
+int Rock::fight(Tool *t) {
   if (t->getType() == 'p') {
     cout << "Rock is weak against paper.." << endl;
     cout << "Rock Strength this round: " << (this->getStrength() / 2) << endl;
     cout << "Paper Strength this round: " << t->getStrength() << endl;
     if((this->getStrength() / 2) > t->getStrength()) {
       cout << "Rock Wins" << endl << endl;
+      return 3;
     } else if ((this->getStrength() / 2) < t->getStrength()) {
       cout << "Paper Wins" << endl << endl;
+      return 4;
     } else {
       cout << "It was a tie game!" << endl << endl;
+      return 5;
     }
   }
 
@@ -39,10 +42,13 @@ void Rock::fight(Tool *t) {
     cout << "Scissors Strength this round: " << t->getStrength() << endl;
     if((this->getStrength() * 2) > t->getStrength()) {
       cout << "Rock Wins" << endl << endl;
+      return 3;
     } else if ((this->getStrength() * 2) < t->getStrength()) {
       cout << "Scissors Wins" << endl << endl;
+      return 4;
     } else {
       cout << "It was a tie game!" << endl << endl;
+      return 5;
     }
   }
 
@@ -52,11 +58,14 @@ void Rock::fight(Tool *t) {
     cout << "Rock-2 Strength this round: " << t->getStrength() << endl;
     if(this->getStrength() > t->getStrength()) {
       cout << "Rock-1 Wins" << endl << endl;
+      return 3;
     } else if (this->getStrength() < t->getStrength()){
       cout << "Rock-2 Wins" << endl << endl;
+      return 4;
     } else {
       cout << "It was a tie game!" << endl << endl;
+      return 5;
     }
   }          
-
+  return -1;
 }
