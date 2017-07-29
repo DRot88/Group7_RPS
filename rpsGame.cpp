@@ -2,6 +2,7 @@
 #include "paper.hpp"
 #include "rock.hpp"
 #include "scissors.hpp"
+#include "validation.hpp"
 #include <iostream>
 #include <cstdlib>
 using std::cout;
@@ -40,10 +41,15 @@ void RPSGame::playGame() {
   int cpuChoice = computerChoice();
   cout << "\nWelcome to Rock, Paper, Scissors! Would you like to choose different ";
   cout << "strengths for the tools? (Y-Yes, N-No): " << endl;
-  cin >> userChoice;
+  getChar(userChoice, 'y', 'n');
 
-  cout << "\nPlease choose your tool: (R-Rock, P-Paper, S-Scissors): ";
-  cin >> userTool;
+  cout << "\nPlease choose your tool: (R-Rock, P-Paper, S-Scissors, E-Exit): ";
+  getChar(userTool, 'r', 'p', 's','e');
+
+  if (userTool == 'e') {
+    cout << "Exiting Game" << endl;
+    return;
+  }
 
   if (userChoice == 'n') {
     if (userTool == 'r') {
@@ -86,7 +92,10 @@ void RPSGame::playGame() {
     } else {
       compTool = new Scissors(cpuStrength, 's');
       cout << "\nThe Computer has chosen Scissors." << endl;
-    }      
+    }
+
+    p1Tool->fight(compTool);
+
   }
 
   return;

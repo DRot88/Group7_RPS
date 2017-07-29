@@ -10,7 +10,7 @@ class Paper : public Tool {
     ~Paper();
     Paper(int str, char t); // sets user defined strength
     virtual char getType();
-    void fight(Tool t); // temp double strength against Rock, half strength vs scissors
+    void fight(Tool *t); // temp double strength against Rock, half strength vs scissors
 };
 
 

@@ -11,7 +11,7 @@ class Tool {
     void setStrength(int str);
     int getStrength();
     virtual char getType();
-    // virtual void fight(*tool); // potentially pure virtual function
+    virtual void fight(Tool *) = 0; // potentially pure virtual function
 };
 
 #endif

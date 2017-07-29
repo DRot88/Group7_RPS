@@ -10,7 +10,7 @@ class Rock : public Tool {
     Rock(); // default – set strength to 1, set type to ‘r’
     Rock(int str, char t); // sets user defined strength
     virtual char getType();
-    void fight(Tool t); // temp double strength against Scissors, half strength vs Paper
+    void fight(Tool *t); // temp double strength against Scissors, half strength vs Paper
 };
 
 
