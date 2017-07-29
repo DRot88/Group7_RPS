@@ -1,4 +1,5 @@
 #include "tool.hpp"
+#include <iostream>
 
 Tool::Tool() {
   strength = 1;
@@ -16,6 +17,4 @@ char Tool::getType() {
   return type;
 }
 
-// Tool::~Tool() {
-//   delete;
-// }
+Tool::~Tool() {}

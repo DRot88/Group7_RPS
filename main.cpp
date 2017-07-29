@@ -14,10 +14,10 @@ using std::endl;
 int main() {
   srand(time(0));
   RPSGame rps;
-  rps.showMenu();
-  rps.gameStatus();
-  rps.replay();
-  // rps.playGame();
+  // rps.showMenu();
+  // rps.gameStatus();
+  // rps.replay();
+  rps.playGame();
 
 
   // cout << "\nWelcome to RPS!" << endl << endl;

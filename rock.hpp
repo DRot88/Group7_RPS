@@ -6,6 +6,7 @@ class Rock : public Tool {
   private:
     
   public:
+    ~Rock();
     Rock(); // default – set strength to 1, set type to ‘r’
     Rock(int str, char t); // sets user defined strength
     virtual char getType();

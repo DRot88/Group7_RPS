@@ -13,6 +13,8 @@ Paper::Paper(int str, char t) : Tool () {
   type = t;
 }
 
+Paper::~Paper(){};
+
 char Paper::getType() {
   return type;
 }

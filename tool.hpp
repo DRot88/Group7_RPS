@@ -7,7 +7,7 @@ class Tool {
     char type;
   public:
     Tool();
-    // ~Tool();
+    virtual ~Tool();
     void setStrength(int str);
     int getStrength();
     virtual char getType();

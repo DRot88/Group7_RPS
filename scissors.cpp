@@ -13,6 +13,8 @@ Scissors::Scissors(int str, char t) : Tool () {
   type = t;
 }
 
+Scissors::~Scissors(){};
+
 char Scissors::getType() {
   return type;
 }

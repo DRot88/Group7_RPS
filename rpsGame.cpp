@@ -1,4 +1,7 @@
 #include "rpsGame.hpp"
+#include "paper.hpp"
+#include "rock.hpp"
+#include "scissors.hpp"
 #include <iostream>
 #include <cstdlib>
 using std::cout;
@@ -31,20 +34,71 @@ int RPSGame::computerChoice() {
 }
 
 void RPSGame::playGame() {
+  char userChoice;
+  char userTool;
+  int strength;
   int cpuChoice = computerChoice();
+  cout << "\nWelcome to Rock, Paper, Scissors! Would you like to choose different ";
+  cout << "strengths for the tools? (Y-Yes, N-No): " << endl;
+  cin >> userChoice;
 
-  if (cpuChoice == R) {
-    cout << "\nThe Computer has chosen Rock.";
-  } else if (cpuChoice == P) {
-    cout << "\nThe Computer has chosen Paper.";
-  } else {
-    cout << "\nThe Computer has chosen Scissors.";
+  cout << "\nPlease choose your tool: (R-Rock, P-Paper, S-Scissors): ";
+  cin >> userTool;
+
+  if (userChoice == 'n') {
+    if (userTool == 'r') {
+      p1Tool = new Rock();
+    } else if (userTool == 'p') {
+      p1Tool = new Paper();
+    } else {
+      p1Tool = new Scissors();
+    }
+
+    if (cpuChoice == R) { //computer choice
+      compTool = new Rock();
+      cout << "\nThe Computer has chosen Rock." << endl;
+    } else if (cpuChoice == P) {
+      compTool = new Paper();
+      cout << "\nThe Computer has chosen Paper." << endl;
+    } else {
+      compTool = new Scissors();
+      cout << "\nThe Computer has chosen Scissors." << endl;
+    }  
+  } else if (userChoice == 'y') {
+    int cpuStrength = (rand() % 10) + 1;
+    cout << "\nPlease choose an integer for the Strength of the tool: ";
+    cin >> strength;
+
+    if (userTool == 'r') {
+      p1Tool = new Rock(strength, 'r');
+    } else if (userTool == 'p') {
+      p1Tool = new Paper(strength, 'p');
+    } else {
+      p1Tool = new Scissors(strength, 's');
+    }
+
+    if (cpuChoice == R) { //computer choice
+      compTool = new Rock(cpuStrength, 'r');
+      cout << "\nThe Computer has chosen Rock." << endl;
+    } else if (cpuChoice == P) {
+      compTool = new Paper(cpuStrength, 'p');
+      cout << "\nThe Computer has chosen Paper." << endl;
+    } else {
+      compTool = new Scissors(cpuStrength, 's');
+      cout << "\nThe Computer has chosen Scissors." << endl;
+    }      
   }
-
 
   return;
 }
 
 void RPSGame::showMenu() {
   RPSMenu.displayMenu();
+}
+
+RPSGame::~RPSGame() {
+  delete p1Tool;
+  p1Tool = 0;
+  delete compTool;
+  compTool = 0;
 }

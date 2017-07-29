@@ -8,6 +8,7 @@ class Scissors : public Tool {
   public:
     Scissors(); // default – set strength to 1, set type to ‘s’
     Scissors(int str, char t); // sets user defined strength
+    ~Scissors();
     virtual char getType();
     void fight(Tool t); // temp double strength against Paper, half strength vs Rock
 };

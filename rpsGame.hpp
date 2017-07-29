@@ -8,13 +8,14 @@ enum RPS {R, P, S};
 class RPSGame {
    private:
     Menu RPSMenu;
-     // Tool* p1Tool ;
-     // Tool* compTool;
+     Tool* p1Tool;
+     Tool* compTool;
      int humanWins;
      int computerWins;
      int tieGames;
   public:
      RPSGame(); //wins and ties set to 0
+     ~RPSGame();
      void playGame(); // used to initiate gameplay
      void gameStatus(); // displays tools, winner/loser, stats for total wins/losses
      void replay(); // ask user to play again
