@@ -20,7 +20,7 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(OBJECTS) $(STD) -o $@
 
 .cpp.o:
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $(STD) $< -o $@
 
 clean:
 	rm *o $(EXECUTABLE)
