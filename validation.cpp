@@ -92,7 +92,7 @@ int getInt()
 
    cin >> stringInput;
    //Check to make sure no character other than an integer 0-9 was entered.
-   for (int i = 0; i < stringInput.length(); i++)
+   for (unsigned int i = 0; i < stringInput.length(); i++)
    {
       if (stringInput[i] != '0' && stringInput[i] != '1' && stringInput[i] != '2' && stringInput[i] != '3'
          && stringInput[i] != '4' && stringInput[i] != '5' && stringInput[i] != '6' && stringInput[i] != '7'
@@ -112,7 +112,7 @@ int getInt()
       
       cin >> stringInput;
       //Check to make sure no character other than an integer 0-9 was entered.
-      for (int i = 0; i < stringInput.length(); i++)
+      for (unsigned int i = 0; i < stringInput.length(); i++)
       {
          if (stringInput[i] != '0' && stringInput[i] != '1' && stringInput[i] != '2' && stringInput[i] != '3' 
             && stringInput[i] != '4' && stringInput[i] != '5' && stringInput[i] != '6' && stringInput[i] != '7' 
